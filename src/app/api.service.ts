@@ -10,13 +10,9 @@ export class ApiService {
 
   constructor(private http:HttpClient) { }
   post=(api:string,data:any)=>{
-    this.http.post(this.baseurl+api,data).subscribe(reply=>{
-      return(reply);
-    })
+    return this.http.post(this.baseurl+api,data);
   }
   get=(api:string,data:any)=>{
-    this.http.post(this.baseurl+api,data).subscribe(reply=>{
-      return(reply);
-    })
+    return this.http.get(this.baseurl+api,data);
   }
 }
