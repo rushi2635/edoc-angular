@@ -12,6 +12,15 @@ import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { HeaderComponent } from './admin/header/header.component';
 import { FooterComponent } from './admin/footer/footer.component';
 import { SidebarComponent } from './admin/sidebar/sidebar.component';
+import { DocumentsComponent } from './admin/documents/documents.component';
+import { WordsComponent } from './admin/words/words.component';
+import { EmployeesComponent } from './admin/employees/employees.component';
+import { TopbarComponent } from './admin/topbar/topbar.component';
+import { DocumentComponent } from './admin/document/document.component';
+import { EmployeeComponent } from './admin/employee/employee.component';
+import { WordComponent } from './admin/word/word.component';
+import { PrintdocumentComponent } from './admin/printdocument/printdocument.component';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +29,15 @@ import { SidebarComponent } from './admin/sidebar/sidebar.component';
     DashboardComponent,
     HeaderComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
+    DocumentsComponent,
+    WordsComponent,
+    EmployeesComponent,
+    TopbarComponent,
+    DocumentComponent,
+    EmployeeComponent,
+    WordComponent,
+    PrintdocumentComponent
   ],
   imports: [
     BrowserModule,

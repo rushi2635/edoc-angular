@@ -1,0 +1,79 @@
+<div id="wrapper">
+  <app-header></app-header>
+  <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+          <!-- Topbar -->
+          <app-topbar></app-topbar>
+          <!-- End of Topbar -->
+
+          <!-- Begin Page Content -->
+          <div class="container-fluid">
+              <!-- Page Heading -->
+              <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                  <h1 class="h3 mb-0 text-gray-800">Employees</h1>
+              </div>
+
+              <form class="row" [formGroup]="employee" (ngSubmit)="submit(employee.value)">
+                  <input type="hidden" name="id" formControlName="id" />
+                  <div class="col-lg-12">
+                      Emp-Id
+                      <input type="text" class="form-control" name="empid" formControlName="empid" />
+                  </div>
+                  <div class="col-lg-12">
+                      Name
+                      <input type="text" class="form-control" name="name" formControlName="name" />
+                  </div>
+                  <div class="col-lg-12">
+                      Gender
+                      <input type="radio" value="male" name="gender" formControlName="gender">Male
+                      <input type="radio" value="female" name="gender" formControlName="gender">Female
+                  </div>
+                  <div class="col-lg-12">
+                      Birth Date
+                      <input type="date" name="birthdate" class="form-control" formControlName="birthdate">
+                  </div>
+                  <div class="col-lg-12">
+                      Address
+                      <textarea name="address"  class="form-control"formControlName="address" ></textarea>
+                  </div>
+                  <div class="col-lg-12">
+                      Email-id
+                      <input type="email" name="email" class="form-control" formControlName="email">
+                  </div>
+                  <div class="col-lg-12">
+                      Mobile No.
+                      <input type="text" name="mobileno"  class="form-control" formControlName="mobileno">
+                  </div>
+                  <div class="col-lg-12">
+                      Joining Date
+                      <input type="date" name="joiningdate" class="form-control" formControlName="joiningdate">
+                  </div>
+                  <div class="col-lg-12">
+                      Department Name
+                      <input type="text" name="departmentname" class="form-control" formControlName="departmentname">
+                  </div>
+                  <div class="col-lg-12">
+                      Relieving Date
+                      <input type="date" name="relievingdate" class="form-control" formControlName="relievingdate">
+                  </div>
+                  <div class="col-lg-12">
+                    Picture
+                    <input type="file" id="emppic" class="form-control" accept="image/*" (change)="handleUpload($event)" />
+                  </div>
+                  <div class="col-lg-12">
+                      <br />
+                      <input type="submit" value="Save" class="btn btn-success" />
+                  </div>
+              </form>
+          </div>
+
+      </div>
+
+      <!-- End of Footer -->
+      <app-footer></app-footer>
+
+  </div>
+  <!-- End of Content Wrapper -->
