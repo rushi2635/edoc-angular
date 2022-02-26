@@ -68,4 +68,6 @@ export class PrintdocumentComponent implements OnInit {
       }
       console.log(word);
       this.content.replace(word.keyword, replacewith);
-    }
+    });
+  }
+}
